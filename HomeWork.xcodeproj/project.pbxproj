@@ -46,6 +46,13 @@
 		31B7B808192683CE004D2961 /* NCGenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31B7B806192683CE004D2961 /* NCGenericTableViewCell.xib */; };
 		31B7B80C1926917F004D2961 /* NCHelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B7B80A1926917F004D2961 /* NCHelloViewController.m */; };
 		31B7B80D1926917F004D2961 /* NCHelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31B7B80B1926917F004D2961 /* NCHelloViewController.xib */; };
+		D3D519261927B2E300E0F2C3 /* gift.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D519221927B2E300E0F2C3 /* gift.png */; };
+		D3D519271927B2E300E0F2C3 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D519231927B2E300E0F2C3 /* star.png */; };
+		D3D519281927B2E300E0F2C3 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D519241927B2E300E0F2C3 /* heart.png */; };
+		D3D519291927B2E300E0F2C3 /* coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D519251927B2E300E0F2C3 /* coffee.png */; };
+		D3D519331927C4D900E0F2C3 /* NCOneDigitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D519311927C4D900E0F2C3 /* NCOneDigitTableViewCell.m */; };
+		D3D519341927C4D900E0F2C3 /* NCOneDigitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D519321927C4D900E0F2C3 /* NCOneDigitTableViewCell.xib */; };
+		D3D519381927C8B600E0F2C3 /* NCTwoLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D519371927C8B600E0F2C3 /* NCTwoLabels.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +124,15 @@
 		31B7B8091926917F004D2961 /* NCHelloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHelloViewController.h; sourceTree = "<group>"; };
 		31B7B80A1926917F004D2961 /* NCHelloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHelloViewController.m; sourceTree = "<group>"; };
 		31B7B80B1926917F004D2961 /* NCHelloViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCHelloViewController.xib; sourceTree = "<group>"; };
+		D3D519221927B2E300E0F2C3 /* gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift.png; sourceTree = "<group>"; };
+		D3D519231927B2E300E0F2C3 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		D3D519241927B2E300E0F2C3 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		D3D519251927B2E300E0F2C3 /* coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee.png; sourceTree = "<group>"; };
+		D3D519301927C4D900E0F2C3 /* NCOneDigitTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCOneDigitTableViewCell.h; sourceTree = "<group>"; };
+		D3D519311927C4D900E0F2C3 /* NCOneDigitTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCOneDigitTableViewCell.m; sourceTree = "<group>"; };
+		D3D519321927C4D900E0F2C3 /* NCOneDigitTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCOneDigitTableViewCell.xib; sourceTree = "<group>"; };
+		D3D519361927C8B600E0F2C3 /* NCTwoLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTwoLabels.h; sourceTree = "<group>"; };
+		D3D519371927C8B600E0F2C3 /* NCTwoLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTwoLabels.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +221,7 @@
 		31B3144F1926A5D700A4DFFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D3D519351927C88400E0F2C3 /* TwoLabelsOnCell */,
 				31B314501926A5E000A4DFFC /* CellPressModel */,
 			);
 			name = Models;
@@ -238,9 +255,8 @@
 		31B69B8219264B39007A875B = {
 			isa = PBXGroup;
 			children = (
-				31397B3E1926B7AA00019B5E /* NCBirthDayViewController.h */,
-				31397B3F1926B7AA00019B5E /* NCBirthDayViewController.m */,
-				31397B401926B7AA00019B5E /* NCBirthDayViewController.xib */,
+				D3D5192A1927BDAD00E0F2C3 /* Day Of Birth Controller */,
+				D3E05B3D1927B1860015DA31 /* Resources */,
 				31B314551926AE9F00A4DFFC /* Protocols */,
 				31B3144F1926A5D700A4DFFC /* Models */,
 				31B69BDE19266B56007A875B /* Controllers */,
@@ -403,8 +419,41 @@
 				31B7B7FF1926800A004D2961 /* NCTwoDigitsTableViewCell.h */,
 				31B7B8001926800A004D2961 /* NCTwoDigitsTableViewCell.m */,
 				31B7B8011926800A004D2961 /* NCTwoDigitsTableViewCell.xib */,
+				D3D519301927C4D900E0F2C3 /* NCOneDigitTableViewCell.h */,
+				D3D519311927C4D900E0F2C3 /* NCOneDigitTableViewCell.m */,
+				D3D519321927C4D900E0F2C3 /* NCOneDigitTableViewCell.xib */,
 			);
 			name = "For First Item";
+			sourceTree = "<group>";
+		};
+		D3D5192A1927BDAD00E0F2C3 /* Day Of Birth Controller */ = {
+			isa = PBXGroup;
+			children = (
+				31397B3E1926B7AA00019B5E /* NCBirthDayViewController.h */,
+				31397B3F1926B7AA00019B5E /* NCBirthDayViewController.m */,
+				31397B401926B7AA00019B5E /* NCBirthDayViewController.xib */,
+			);
+			name = "Day Of Birth Controller";
+			sourceTree = "<group>";
+		};
+		D3D519351927C88400E0F2C3 /* TwoLabelsOnCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3D519361927C8B600E0F2C3 /* NCTwoLabels.h */,
+				D3D519371927C8B600E0F2C3 /* NCTwoLabels.m */,
+			);
+			name = TwoLabelsOnCell;
+			sourceTree = "<group>";
+		};
+		D3E05B3D1927B1860015DA31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3D519221927B2E300E0F2C3 /* gift.png */,
+				D3D519231927B2E300E0F2C3 /* star.png */,
+				D3D519241927B2E300E0F2C3 /* heart.png */,
+				D3D519251927B2E300E0F2C3 /* coffee.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,14 +539,19 @@
 				31397B421926B7AA00019B5E /* NCBirthDayViewController.xib in Resources */,
 				31B69BE719266C65007A875B /* NCTwoSectionsViewController.xib in Resources */,
 				31B69BDA19266591007A875B /* NCDigitsTableCellTableViewCell.xib in Resources */,
+				D3D519341927C4D900E0F2C3 /* NCOneDigitTableViewCell.xib in Resources */,
 				31B7B808192683CE004D2961 /* NCGenericTableViewCell.xib in Resources */,
 				31B69BA119264B39007A875B /* Images.xcassets in Resources */,
 				31B69BC619264BA3007A875B /* NCNamesViewController.xib in Resources */,
+				D3D519271927B2E300E0F2C3 /* star.png in Resources */,
+				D3D519291927B2E300E0F2C3 /* coffee.png in Resources */,
 				31B69BD5192664A3007A875B /* NCMultipleLinesTableViewController.xib in Resources */,
 				31B3144019269ECF00A4DFFC /* NCGoogleViewController.xib in Resources */,
 				31B7B8031926800A004D2961 /* NCTwoDigitsTableViewCell.xib in Resources */,
+				D3D519281927B2E300E0F2C3 /* heart.png in Resources */,
 				31B69BC119264B6A007A875B /* NCMainViewController.xib in Resources */,
 				31B7B80D1926917F004D2961 /* NCHelloViewController.xib in Resources */,
+				D3D519261927B2E300E0F2C3 /* gift.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D519381927C8B600E0F2C3 /* NCTwoLabels.m in Sources */,
 				31B3143F19269ECF00A4DFFC /* NCGoogleViewController.m in Sources */,
 				31B69BD4192664A3007A875B /* NCMultipleLinesTableViewController.m in Sources */,
 				31B314531926A60A00A4DFFC /* NCCellModel.m in Sources */,
@@ -525,6 +580,7 @@
 				31B69BE619266C65007A875B /* NCTwoSectionsViewController.m in Sources */,
 				31B7B807192683CE004D2961 /* NCGenericTableViewCell.m in Sources */,
 				31B69B9B19264B39007A875B /* main.m in Sources */,
+				D3D519331927C4D900E0F2C3 /* NCOneDigitTableViewCell.m in Sources */,
 				31B7B80C1926917F004D2961 /* NCHelloViewController.m in Sources */,
 				31B69BD919266591007A875B /* NCDigitsTableCellTableViewCell.m in Sources */,
 				31B69BC519264BA3007A875B /* NCNamesViewController.m in Sources */,

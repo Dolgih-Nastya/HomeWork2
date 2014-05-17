@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface NCGenericTableViewCell : UITableViewCell
+
+- (void)setInfo:(id)info;
+
 @property(nonatomic, strong) IBOutlet UILabel *firstLabel;
 @property(nonatomic, strong) IBOutlet UILabel *secondLabel;
+
 @end

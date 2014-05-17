@@ -7,10 +7,7 @@
 //
 
 #import "NCAppDelegate.h"
-#import "NCNamesViewController.h"
-#import "NCMultipleLinesTableViewController.h"
 #import "NCMainViewController.h"
-#import "NCTwoSectionsViewController.h"
 
 @implementation NCAppDelegate
 
@@ -19,35 +16,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = self.tabBarController;
+    self.window.rootViewController = [NCMainViewController new];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (UITabBarController *)tabBarController
-{
-    if (!_tabBarController)
-    {
-        _tabBarController = [UITabBarController new];
-        NCNamesViewController              *names =  [NCNamesViewController new];
-        NCMultipleLinesTableViewController *digits = [NCMultipleLinesTableViewController new];
-        NCTwoSectionsViewController *twoSections = [NCTwoSectionsViewController new];
-        _tabBarController.viewControllers= @[
-                                             [[UINavigationController alloc] initWithRootViewController:names],
-                                             [[UINavigationController alloc] initWithRootViewController:digits],
-                                             [[UINavigationController alloc] initWithRootViewController:twoSections]
-                                             ];
-        UITabBarItem *namesItem = _tabBarController.tabBar.items[0];
-       //UITabBarItem  *digitsItem   = _tabBarController.tabBar.items[1];
-       // UITabBarItem *tableItem      = _tabBarController.tabBar.items[2];
-     //   [calculatorItem setImage:[UIImage imageNamed:@"calculator"]];
-        [namesItem setImage:[UIImage imageNamed:@"settings"]];
-       // [digitsItem setImage:[UIImage imageNamed:@"calculator" ]];
-        
-        
-    }
-    return _tabBarController;
-}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -7,19 +7,14 @@
 //
 
 #import "NCTwoDigitsTableViewCell.h"
+#import "NCTwoLabels.h"
 
 @implementation NCTwoDigitsTableViewCell
 
-- (void)awakeFromNib
+- (void)setInfo:(NCTwoLabels *)info
 {
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    self.firstLabel.text = info.first;
+    self.secondLabel.text = info.second;
 }
 
 @end

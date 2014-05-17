@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol NCColorChangable <NSObject>
-@required
--(void) changeBackgroundColor;
+
+-(void)update;
+
 @end

@@ -12,11 +12,16 @@
 #import "NCGenericTableViewCell.h"
 #import "NCHelloViewController.h"
 #import "NCGoogleViewController.h"
+#import "NCOneDigitTableViewCell.h"
+#import "NCTwoLabels.h"
 
 @interface NCTwoSectionsViewController ()
 @property(nonatomic, strong) NSArray *info1;
-@property(nonatomic, strong) NSArray *info2;
-@property(nonatomic, strong) NSArray *info3;
+
+@property (nonatomic,strong) NSArray *info2;
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation NCTwoSectionsViewController
@@ -34,9 +39,13 @@
 {
     [super viewDidLoad];
     self.info1 = @[@"1", @"2", @"3"];
-    self.info2 = @[@"1", @"2"];
-    self.info3 = @[@"4", @"2"];
+    
+    self.info2 = @[[[NCTwoLabels alloc] initWithFirstLabel:@"1" andSecondLabel:@"4"],
+                   [[NCTwoLabels alloc] initWithFirstLabel:@"2" andSecondLabel:@"2"]];
+    
     self.title = @"first";
+    [self.tableView registerNib:[UINib nibWithNibName:@"NCOneDigitTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell1"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"NCTwoDigitsTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell2"];
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -64,38 +73,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *identifier = @"";
-    NSString *nibName = @"";
-    UITableViewCell *cell;
     if (indexPath.section == 0)
     {
-        nibName = @"NCNamesTableViewCell";
-        identifier = @"Cell1";
+        return [tableView dequeueReusableCellWithIdentifier:@"Cell1"];
     }
-    else{
-        nibName = @"NCTwoDigitsTableViewCell";
-        identifier = @"Cell2";
-    }
-    cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil)
-    {
-        [tableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:identifier];
-        cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    }
-    return  cell;
-    
+    return [tableView dequeueReusableCellWithIdentifier:@"Cell2"];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(NCGenericTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section==0)
     {
-        cell.firstLabel.text = self.info1[indexPath.row];
+        [cell setInfo:self.info1[indexPath.row]];
+        
     }
     else
     {
-        cell.firstLabel.text = self.info2[indexPath.row];
-        cell.secondLabel.text = self.info3[indexPath.row];
+        [cell setInfo:self.info2[indexPath.row]];
     }
 }
 

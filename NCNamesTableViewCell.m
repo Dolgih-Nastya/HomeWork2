@@ -7,19 +7,20 @@
 //
 
 #import "NCNamesTableViewCell.h"
+#import "NCCellModel.h"
 
 @implementation NCNamesTableViewCell
 
-- (void)awakeFromNib
+- (void)setInfo:(id)info
 {
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    NCCellModel *currentInfo = (NCCellModel *)info;
+    self.firstLabel.text = currentInfo.text;
+    if(currentInfo.isSelected){
+        self.contentView.backgroundColor = [UIColor greenColor];
+    } else {
+        self.contentView.backgroundColor = [UIColor whiteColor];
+    }
+   
 }
 
 @end

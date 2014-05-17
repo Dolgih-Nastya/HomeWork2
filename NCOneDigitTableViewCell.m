@@ -1,14 +1,15 @@
 //
-//  NCGenericTableViewCell.m
+//  NCOneDigitTableViewCell.m
 //  HomeWork
 //
-//  Created by Анастасия Долгих on 5/16/14.
+//  Created by Vlad Korzun on 17.05.14.
 //  Copyright (c) 2014 Anastasia. All rights reserved.
 //
 
-#import "NCGenericTableViewCell.h"
+#import "NCOneDigitTableViewCell.h"
+#import "NCCellModel.h"
 
-@implementation NCGenericTableViewCell
+@implementation NCOneDigitTableViewCell
 
 - (void)awakeFromNib
 {
@@ -24,7 +25,12 @@
 
 - (void)setInfo:(id)info
 {
-    
+    if([info isKindOfClass:[NSString class]]){
+        self.firstLabel.text = info;
+   
+    }
 }
+
+
 
 @end
